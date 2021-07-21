@@ -1,16 +1,45 @@
-body, html {
-  height: 100%;
-}
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+            <title>Nowhere</title>
+            <style>
+                body {
+                    position: relative;
+                    width: 100%;
+                    height: 100%;
+                    margin: 0;
+                    padding: 0;
+                    background: url('https://i.imgur.com/1eaG6bx.jpg')/*Wallpaper*/ center/cover fixed, #000
+                }
 
-.bg {
-  /* The image used */
-  background-image: url("https://i.imgur.com/LuZONHH.jpeg");
+                .bigballoon{
+                    list-style:none;
+                    width:90%;
+                    margin:7%;
+                    padding: 0;
+                }
 
-  /* Full height */
-  height: 100%;
+                .balloon img {
+                    max-width:156px;
+                    height: auto;
+                    position: relative;
+                }
+	@@ -47,9 +47,9 @@
+    </head>
 
-  /* Center and scale the image nicely */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
+    <body translate="no" >
+        <ul class="testanime">
+            <li class="testanime b0">
+                <img src="https://i.imgur.com/LuZONHH.jpg">
+            </li>
+        </ul>
+
+	@@ -66,8 +66,8 @@
+
+            var baloon = $('.balloon');
+            function run() {
+                baloon.animate({ top: '+=25' }, 1010);
+                baloon.animate({ top: '-=25' }, 1010, run);
+            }
+            run();
+        </script>
